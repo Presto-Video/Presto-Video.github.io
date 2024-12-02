@@ -1,0 +1,287 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+
+.footer .icon-link {
+    font-size: 25px;
+    color: #000;
+}
+
+.padding {
+    padding: 1em;
+    margin: -1em 0em 0em;
+}
+
+.padding2 {
+    padding: 2em 0em 0em;
+    margin: -1em 0em 0em;
+}
+
+.padding3 {
+    padding: 1em;
+    margin: -2em 0em -5em;
+}
+
+.padding4 {
+    padding: 3em;
+    margin: -4em 0em -3em;
+}
+
+.padding5 {
+    margin: -1.5em 0em 1em;
+}
+
+.link-block a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.publication-links {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 12%; /* Occupy 20% of the screen height */
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center; /* Center the buttons vertically */
+    z-index: 2; /* Ensure it's above the video */
+  }
+
+.cta-button {
+    background-color: transparent; /* No background */
+    border: 1.5px solid black; /* Black border */
+    color: black; /* Black text */
+    padding: 6px 12px;
+    font-size: 1em;
+    font-weight: bold; /* Optional for bold text */
+    border-radius: 15px; /* Round button shape */
+    cursor: pointer;
+    display: inline-block;
+    margin: 2dvh 0px;
+    text-decoration: none; /* Removes underline */
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  }
+
+  .cta-button:hover {
+    background-color: white;
+    color: black; /* Changes text color on hover */
+  }
+  
+
+.dnerf {
+  font-variant: small-caps;
+}
+
+.title-center {
+  text-align: center;
+}
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 5rem;
+}
+
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.publication-banner {
+  max-height: parent;
+
+}
+
+.video-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: 0;
+  }
+
+.video-header {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+  }
+  
+.background-video {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+z-index: -1;
+}
+
+#navbar {
+    background-color: #ffffff;
+    opacity: 0.85;
+    color: rgb(26, 26, 26);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 4px;
+    z-index: 99999;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  }
+
+.content-overlay {
+    position: absolute; /* Allows precise placement */
+    top: 45%; /* Adjust this value to move text higher or lower */
+    left: 5%; /* Adjust this value to move text left or right */
+    right: 65%; /* Adjust this value to move text left or right */
+    text-align: left;
+    z-index: 1;
+}
+
+.content-overlay h1 {
+    font-size: 4rem; /* Large size */
+    font-weight: bold; /* Bold text */
+    color: black; /* White color */
+  }
+  
+.content-overlay p {
+    font-size: 1.5rem; /* Adjust size for paragraph */
+    color: black; /* White color */
+    font-weight: bold; /* Bold text */
+  }
+
+.publication-banner video {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  object-fit: fit;
+}
+
+
+.publication-title {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-authors {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-venue {
+    color: #555;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.publication-awards {
+    color: #ff3860;
+    width: fit-content;
+    font-weight: bolder;
+}
+
+.publication-authors {
+}
+
+.publication-authors a {
+   color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+    text-decoration: underline;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+.publication-banner img {
+}
+
+.publication-authors {
+  /*color: #4286f4;*/
+}
+
+.publication-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+
+    overflow: hidden;
+    border-radius: 10px !important;
+}
+
+.publication-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.publication-body img {
+}
+
+.results-carousel {
+  overflow: hidden;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between the videos */
+}
+.media-wrapper {
+    position: relative;
+    width: 50%; /* 控制宽度以适应布局 */
+  }
+
+
+.results-carousel .item {
+  margin: 5px;
+  overflow: hidden;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  padding: 0;
+  font-size: 0;
+}
+
+.results-carousel video {
+  margin: 0;
+}
+
+
+.interpolation-panel {
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+
+.interpolation-panel .interpolation-image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+
+.interpolation-video-column {
+}
+
+.interpolation-panel .slider {
+  margin: 0 !important;
+}
+
+.interpolation-panel .slider {
+  margin: 0 !important;
+}
+
+#interpolation-image-wrapper {
+  width: 100%;
+}
+#interpolation-image-wrapper img {
+  border-radius: 5px;
+}

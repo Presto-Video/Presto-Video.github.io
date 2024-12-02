@@ -1,6 +1,305 @@
+<!DOCTYPE html>
 <html>
-<head><title>Dynamic Video Generation with Multiple Text Integration</title></head>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Presto is a video diffusion model that creates long videos with rich content and long-range coherence, via segmented cross-attention and video data curation.">
+  <meta name="keywords" content="Diffusion Model, Long Video">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Presto: Long Video Diffusion Generation with Segmented Cross-Attention and Content-Rich Video Data Curation</title>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/icon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
 <body>
-Hello World!
+
+
+<nav id="navbar">
+    <a href="#presto"><span style="font-weight:bolder; color: rgb(255, 106, 131);">Presto</span></a>
+    <a href="#gallery">Gallery</a>
+    <a href="#abstract">Abstract</a>
+    <a href="#arch">Architecture</a>
+    <a href="#data">LongTake-HD</a>
+    <a href="#long">Long Video</a>
+    <a href="#related">Related Links</a>
+    <a href="#bibtex">BibTex</a>
+  </nav>
+
+<header class="video-header">
+    <video autoplay loop muted playsinline class="background-video">
+        <source src="static/videos/teaser_compress.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="content-overlay">
+        <h1>Presto</h1>
+        <p>Create long videos with rich content and long-range coherence from text prompts.</p> 
+        <a href="https://example.com" class="cta-button"><span class="icon"><i class="fas fa-file-pdf"></i></span>Paper</a>
+        <a href="https://github.com/rhymes-ai/Allegro" class="cta-button"><span class="icon"><i class="fab fa-github"></i></span>Code (Soon)</a>
+      </div>
+</header>
+
+
+<section class="hero">
+  <div class="hero-body" id="presto">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Long Video Diffusion Generation with Segmented Cross-Attention and Content-Rich Video Data Curation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://cakeyanxin.github.io">Xin Yan</a>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=EzYiBeUAAAAJ&hl=en">Yuxuan Cai</a>,</span>
+            <span class="author-block">
+              <a href="https://openreview.net/profile?id=~Qiuyue_Wang2">Qiuyue Wang</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://openreview.net/profile?id=~Yuan_Zhou12">Yuan Zhou</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=OdE3MsQAAAAJ&hl=zh-CN">Wenhao Huang</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://hyang0511.github.io/">Huan Yang</a>
+            </span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">01.AI</span>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</section>
+
+<section class="hero teaser">
+    <div class="padding5">
+    <div class="container is-max-desktop">
+        <div class="video-container">
+            <div class="media-wrapper">
+          <video id="teaser1" autoplay muted loop playsinline>
+            <source src="./static/videos/ants_compress.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="media-wrapper">
+          <video id="teaser2" autoplay muted loop playsinline>
+            <source src="./static/videos/teaser_compress.mp4" type="video/mp4">
+          </video>
+        </div>
+    </div>
+        <h2 class="subtitle has-text-centered">
+            <span class="dnerf">Presto generates long videos with rich content and long-range coherence.</span>
+          </h2>
+      </div>
+    </div>
+</section>
+
+<section class="hero is-light is-small" id="gallery">
+    <div class="hero-body">
+        <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+        
+          <div class="item">
+            <video poster="" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/a_compress.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/b_compress.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/c_compress.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/d_compress.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/e_compress.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/f_compress.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<section class="section">
+    <div class="padding4" id="abstract">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We introduce <b>Presto</b>, a novel video diffusion model designed to generate 15-second videos with long-range coherence and rich content. 
+          </p>
+          <p>
+            Extending video generation methods to maintain scenario diversity over long durations presents significant challenges. To address this, we propose a Segmented Cross-Attention (SCA) strategy, which splits hidden states into segments along the temporal dimension, allowing each segment to cross-attend to a corresponding sub-caption. SCA requires no additional parameters, enabling seamless incorporation into current DiT-based architectures.
+        </p>
+        <p>
+            To facilitate high-quality long video generation, we build the <b>LongTake-HD</b> dataset, consisting of 261k content-rich videos with scenario coherence, annotated with an overall video caption and five progressive sub-captions. 
+        </p>
+        <p>
+            We show that our <b>Presto</b> outperforms existing video diffusion models on automatic metrics and human evaluations. This demonstrates that our proposed method significantly enhances the content richness, maintains long-range coherence, and captures intricate textual details. 
+          </p>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+</div>
+
+<div class="padding2" id="arch">
+  <div class="container is-max-desktop">
+    <div class="column is-centered">
+        <div class="content">
+            <h2 class="title is-3 title-center">Architecture</h2>
+            <image src="./static/images/framework.jpg" alt="arch" width="90%" style="display: block; margin: auto;"/>
+            <p>
+                <b>Presto</b> utilizes LLMs to decouple text input into multiple progressive sub-captions. We propose a <b>Segmented Cross-Attention</b> mechanism to 
+                effectively incorporate these prompts concurrently.
+            </p>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="padding" id="data">
+    <div class="container is-max-desktop">
+      <div class="column is-centered">
+        <div class="column">
+          <div class="content">
+              <h2 class="title is-3 title-center">LongTake-HD</h2>
+              <image src="./static/images/datacase.jpg" alt="dataset" width="80%" style="display: block; margin: auto;"/>
+              <p>
+                  Our <b>LongTake-HD</b> dataset has 261k instances, each comprising a content-rich video filtered from public sources, annotated with an overall video caption and five progressive sub-captions. We apply rigorous filtering criteria to ensure scenario coherence and content richness in videos.
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="padding3" id="long">
+    <div class="container is-max-desktop">
+        <div class="column is-centered">
+          <div class="column">
+            <div class="content">
+                <h2 class="title is-3 title-center">Long Video</h2>
+                <div class="video-container">
+                    <div class="media-wrapper">
+                  <video id="teaser1" autoplay muted loop playsinline>
+                    <source src="./static/videos/teaser_compress.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="media-wrapper">
+                  <video id="teaser2" autoplay muted loop playsinline>
+                    <source src="./static/videos/teaser_int_compress.mp4" type="video/mp4">
+                  </video>
+                </div>
+            </div>
+            <p>
+                As the intensified dynamics decelerate via the interpolation model, our <b>Presto</b> can generate 15-second videos. However, adopting traditional interpolation models may result in artifacts, as the scenario motion is too significant to these models. A better way is to use image-conditioned video diffusion model, which we leave as our future work.
+            </p>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+
+</section>
+
+
+<section class="section">
+    <div class="padding" id="related">
+    <div class="container is-max-desktop content">
+    <h2 class="title">Related Links</h2>
+        <div class="content has-text-justified">
+            We appreciate the following works that have inspired and influenced our research:
+          <ul>
+            <li> <a href="https://github.com/rhymes-ai/Allegro">Allegro</a> is a powerful open-source video diffusion model that generates high-quality videos. It supports text-to-video generation, text-image-to-video generation, and fine-tuning on custom datasets.</li>
+            <li> <a href="https://github.com/PKU-YuanGroup/Open-Sora-Plan">Open-Sora-Plan</a> is a project that aims to create a simple and scalable repository to reproduce Sora.</li>
+            <li> <a href="https://github.com/hpcaitech/Open-Sora">Open-Sora</a> is an initiative dedicated to efficiently producing high-quality video.</li>
+            <li> <a href="https://github.com/MCG-NJU/EMA-VFI">EMA-VFI</a> is a video frame interpolation model.</li>
+</div>
+  </div>
+
+  <div class="padding" id="bibtex">
+
+  <div class="container is-max-desktop content" id="bibtex">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{yan2024long,
+  author    = {Yan, Xin and Cai, Yuxuan and Wang, Qiuyue and Zhou, Yuan and Huang, Wenhao and Yang, Huan},
+  title     = {Long Video Diffusion Generation with Segmented Cross-Attention and Content-Rich Video Data Curation},
+  year      = {2024},
+}</code></pre>
+  </div>
+</div>
+
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Licensed under <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>. Template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">here</a>. Some element designs borrowed from <a href="https://physical-reasoning-project.github.io/">ContPhy</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
